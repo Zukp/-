@@ -1,51 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import Expense from './expenses/Expense';
-import NewExpenses from './expenses/NewExpenses';
-
-
-const expenses = [
-  {
-    id: 'e1',
-    title: 'Toilet Paper',
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
-  },
-  {
-    id: 'e2',
-    title: 'New TV',
-    amount: 799.49,
-    date: new Date(2021, 2, 12)
-  },
-  {
-    id: 'e3',
-    title: 'Car Insurance',
-    amount: 294.67,
-    date: new Date(2021, 2, 28),
-  },
-  {
-    id: 'e4',
-    title: 'New Desk (Wooden)',
-    amount: 450,
-    date: new Date(2021, 5, 12),
-  },
-];
-
+import One from './component/One';
 function App() {
-  const [date,setData] = useState(expenses)
-  function addId(date) {
-   setData((prev) => {
-     return [...prev,date]
-   })
-  }
-  console.log(date)
+ 
+return (
+  <div className='App'>
+    <One />
 
-  return (
-    <div className="App">
-    <NewExpenses onSave={addId} />
-     <Expense expenses={date} />
-    </div>
-  );
+ </div>
+)
+
 }
 
 export default App;
